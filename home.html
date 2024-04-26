@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="home1.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="slider">
+        <div class="slides" style="--img: url(1.jpg)">
+          <div class="content">
+            <h2></h2>
+            <p>
+            </p>
+          </div>
+        </div>
+        <div class="slides" style="--img: url(2.jpg)">
+          <div class="content">
+            <h2></h2>
+            <p>
+            </p>
+          </div>
+        </div>
+        <div class="slides" style="--img: url(3.jpg)">
+          <div class="content">
+            <h2></h2>
+            <p>
+              
+            </p>
+          </div>
+        </div>
+        <div class="slides" style="--img: url(4.jpg)">
+          <div class="content">
+            <h2></h2>
+            <p>
+            </p>
+          </div>
+        </div>
+        <div class="slides" style="--img: url(5.jpg)">
+          <div class="content">
+            <h2></h2>
+            <p>
+            </p>
+          </div>
+        </div>
+        <div class="slides" style="--img: url(4.jpg)">
+          <div class="content">
+            <h2></h2>
+            <p>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="buttons">
+        <span class="prev"></span>
+        <span class="next"></span>
+      </div>
+    </div>
+
+    <script>
+      let prev = document.querySelector(".prev");
+      let next = document.querySelector(".next");
+      let slider = document.querySelector(".slider");
+
+      next.addEventListener("click", function () {
+        let slides = document.querySelectorAll(".slides");
+        slider.appendChild(slides[0]);
+      });
+      prev.addEventListener("click", function () {
+        let slides = document.querySelectorAll(".slides");
+        slider.prepend(slides[slides.length - 1]);
+      });
+    </script>
+  </body>
+</html>
